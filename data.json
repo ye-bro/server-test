@@ -1,0 +1,26 @@
+[
+	{
+		"x": "用micro编辑器仿照vscode配色主题",
+		"y": "2022年6月14日",
+		"z": "micro编辑器颜色主题太难看了，试图换成vscode颜色主题",
+		"href": "./blog/2022/06/用micro编辑器仿照vscode配色主题.html"
+	},
+	{
+		"x": "如何用Astyle进行单个和批量文件格式化",
+		"y": "2022年5月15日",
+		"z": "通过vscode扩展Astyle和Format Files进行文件格式化，可以批量格式化",
+		"href": "./blog/2022/05/如何用Astyle进行单个和批量文件格式化.html"
+	},
+	{
+		"x": "不让micro编辑器生产log.txt",
+		"y": "2022年5月14日",
+		"z": "micro是一个很好用的命令行编辑器,但是默认安装每次都会生产烦人的log.txt，每次我都得自己用rm删除掉。我终于在互联网上找到了不生成log.txt的办法。",
+		"href": "./blog/2022/04/不让micro编辑器生产log.txt.html"
+	},
+	{
+		"x": "Hello,World",
+		"y": "2022年5月14日",
+		"z": "Websites for you and your projects.Hosted directly from your GitHub repository. Just edit, push, and your changes are live.",
+		"href": "./blog/2022/04/Hello,World.html"
+	}
+]

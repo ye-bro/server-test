@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" x="IE=edge">
+	<meta name="viewport" x="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./favicon.png">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.staticfile.org/pangu/4.0.7/pangu.min.js"></script>
+	<script
+		type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+	<script type="text/javascript"
+		src="http://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<title>文章目录测试</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+<body>
+	<div id="divframe">
+		<div class="loadTitle">
+			<input type="button" value="获取数据" id="btn" />
+		</div>
+		<div id="jsonTip"></div>
+	</div>
+</body>
+<script type="application/javascript">
+	//监听按钮点击事件
+	$("#btn").click(function () {
+		//使用getJSON读取userinfo.json文件中的数据
+		$.getJSON("./data.json", function (data) {
+			console.log(data);
+			//获取jsonTip的div
+			//存储数据的变量 
+			var strHtml = "123";
+			//清空内容 
+			// $jsontip.empty();
+			//将获取到的json格式数据遍历到div中
+			$.each(data, function (infoIndex, info) {
+				strHtml += "<h1>" + info["x"] + "</h1>";
+				strHtml += `<small class="text-third"><i class="fa fa-clock-o"></i> 最后更新于 ` + info["y"] + "</small>";
+				strHtml += "<p>" + info["z"] + "</p>";
+				strHtml += "<hr>"
+			})
+			//显示处理后的数据 
+			// $(".onePage")[i].html(strHtml);
+			$("#jsonTip").html(strHtml);
+		})
+	})
+</script>
+
+</html>
